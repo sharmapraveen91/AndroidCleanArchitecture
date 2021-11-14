@@ -1,4 +1,4 @@
-# AndroidCleanArchitecture
+# Android Clean Architecture That Screams (MVVM + JetPack Compose UI + Flow + State)
 
 Clean architecture that screams using MVVM
 
