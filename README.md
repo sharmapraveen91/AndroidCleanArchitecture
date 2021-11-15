@@ -9,3 +9,10 @@ A good architectures produce systems that are:
 - <B>Independent of UI</B>. The UI can change easily, without changing the rest of the system. A Web UI could be replaced with a console UI, for example, without changing the business rules.
 - <B>Independent of Database</B>. You can swap out Oracle or SQL Server, for Mongo, BigTable, CouchDB, or something else. Your business rules are not bound to the database.
 - <B>Independent of any external agency</B>. In fact your business rules simply don’t know anything at all about the outside world.
+
+In this application i have use coinPaprika API to fetch cryptoCoins and their tweets.
+- I have used Screaming architecture with MVVM.
+- I have used Jetpack compose UI.
+- Instead of live data i have used StateFlow.
+
+Reference - https://github.com/coinpaprika/coinpaprika-api-kotlin-client
