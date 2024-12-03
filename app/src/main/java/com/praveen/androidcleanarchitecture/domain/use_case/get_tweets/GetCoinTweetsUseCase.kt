@@ -20,5 +20,4 @@ class GetCoinTweetsUseCase @Inject constructor(private val repository: CoinRepos
                 emit(Resource.Error<List<Tweet>>(e.localizedMessage ?: "Network Error Occurred"))
             }
         }
-
     }
