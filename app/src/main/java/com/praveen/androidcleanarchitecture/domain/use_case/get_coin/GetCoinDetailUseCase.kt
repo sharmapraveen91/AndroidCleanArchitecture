@@ -20,5 +20,4 @@ class GetCoinDetailUseCase @Inject constructor(private val repository: CoinRepos
             emit(Resource.Error<CoinDetail>(e.localizedMessage ?: "Network Error Occurred"))
         }
     }
-
 }
