@@ -12,13 +12,12 @@ import javax.inject.Inject
 class GetCoinsUseCase @Inject constructor(private val repository: CoinRepository) {
 
     operator fun invoke(): Flow<Resource<List<Coin>>> = flow {
-       try{
+        try {
             emit(Resource.Loading<List<Coin>>())
-           val coins = repository.getCoins().map { it.toCoin() }
-           emit(Resource.Success<List<Coin>>(coins))
-        catch (e: IOException){
-           emit(Resource.Error<List<Coin>>(e.localizedMessage?: "Network Error Occurred"))
-       }
+            val coins = repository.getCoins().map { it.toCoin() }
+            emit(Resource.Success<List<Coin>>(coins))
+        } catch (e: IOException) {
+            emit(Resource.Error<List<Coin>>(e.localizedMessage ?: "Network Error Occurred"))
+        }
     }
-
 }
